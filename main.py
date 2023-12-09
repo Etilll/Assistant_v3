@@ -9,7 +9,19 @@ class Field:
 
 class Name(Field):
     def __init__(self,value):
+        self.value = None
+        # Setter
+        self.name = value
+    
+    @property
+    def name(self):
+        return self.value
+    
+    @name.setter
+    def name(self,value):
         self.value = str(value)
+
+
 
 class PhoneCheck:
     def p_check(self,phone:str):
