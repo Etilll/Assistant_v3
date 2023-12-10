@@ -51,7 +51,7 @@ class Birthday:
         from re import search
         # Format: MM-DD-YYYY
         if birthday == "None":
-            pass
+            self.birthday = None
         elif (search(r'\d{2}\D\d{2}\D\d{4}', birthday) != None and len(birthday) == 10):
             tmp = birthday[0:2]
             if self.month_check(tmp):
